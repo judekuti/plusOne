@@ -14,3 +14,7 @@ body{
 mat-toolbar {
     z-index: 10;
 }
+
+mat-sidenav {
+width: 40vw;
+}
