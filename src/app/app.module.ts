@@ -8,6 +8,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -15,9 +17,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule, MatButtonModule, MatCheckboxModule,MatSidenavModule, MatToolbarModule, MatGridListModule, FlexLayoutModule
+    BrowserModule,BrowserAnimationsModule, MatButtonModule, MatCheckboxModule,MatSidenavModule, MatToolbarModule, MatGridListModule, FlexLayoutModule,
+        MatTabsModule, MatIconModule
   ],
-  exports: [MatGridListModule, MatButtonModule,MatSidenavModule, MatToolbarModule, MatCheckboxModule],
+  exports: [MatGridListModule, MatButtonModule,MatSidenavModule, MatToolbarModule, MatCheckboxModule, MatTabsModule, MatIconModule],
   providers: [],
   bootstrap: [AppComponent]
 })
