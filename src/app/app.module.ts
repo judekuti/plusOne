@@ -22,7 +22,7 @@ import { ModelsService } from './models.service';
         MatTabsModule, MatIconModule
   ],
   exports: [MatGridListModule, MatButtonModule,MatSidenavModule, MatToolbarModule, MatCheckboxModule, MatTabsModule, MatIconModule],
-  providers: [],
+  providers: [ModelsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
