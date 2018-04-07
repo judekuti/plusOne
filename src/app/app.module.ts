@@ -12,7 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { ModelsService } from './models.service';
 import {MatCardModule} from '@angular/material/card';
-import {MatDialogModule, MatDialogConfig} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material';
 
 
 @NgModule({
@@ -21,9 +21,9 @@ import {MatDialogModule, MatDialogConfig} from '@angular/material/dialog';
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule, MatButtonModule, MatCheckboxModule,MatSidenavModule, MatToolbarModule, MatGridListModule, FlexLayoutModule,
-        MatTabsModule, MatIconModule, MatCardModule, MatDialogModule, MatDialogConfig
+        MatTabsModule, MatIconModule, MatCardModule, MatDialogModule
   ],
-  exports: [MatGridListModule, MatButtonModule,MatSidenavModule, MatToolbarModule, MatCheckboxModule, MatTabsModule, MatIconModule, MatCardModule, MatDialogModule, MatDialogConfig],
+  exports: [MatGridListModule, MatButtonModule,MatSidenavModule, MatToolbarModule, MatCheckboxModule, MatTabsModule, MatIconModule, MatCardModule, MatDialogModule],
   providers: [ModelsService],
   bootstrap: [AppComponent]
 })

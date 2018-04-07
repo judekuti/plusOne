@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { ModelsService } from './models.service';
 import { Model } from './models';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatDialogModule, MatDialogConfig} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogConfig} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +10,13 @@ import {MatDialogModule, MatDialogConfig} from '@angular/material/dialog';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  @ViewChild('sidenav') sidenav: MatSidenavModule;
   models: Model[]=[];
   selectedModel: Model;
-  @ViewChild('sidenav') sidenav: MatSidenavModule;
 
 
-  constructor(private modelsService: ModelsService, private vcr: ViewContainerRef, private matDialog: MatDialogModule){
+
+  constructor(private modelsService: ModelsService, private vcr: ViewContainerRef, private matDialog: MatDialog){
 
   }
   ngOnInit(){
@@ -34,7 +35,16 @@ export class AppComponent implements OnInit {
       //Open dialog to add message
       // 1. create dialog config
       const dialogConfig = new MatDialogConfig();
-      // 2. open dialog
-      // 3. pass selected model to dialog
+      dialogConfig.viewContainerRef = this.vcr;
+      // // 2. open dialog
+      const dialog: any = this.matDialog.open(AddMessageComponent, dialogConfig);
+      // // 3. pass selected model to dialog
+      dialog.selectedModel = this.selectedModel;
+      console.log(dialog);
   }
+
+  @Component({
+      selector: 'add-message';
+      template: '<p> empty component</p>'
+  })
 }
