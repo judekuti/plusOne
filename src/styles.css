@@ -18,3 +18,16 @@ mat-toolbar {
 mat-sidenav {
 width: 40vw;
 }
+
+mat-card {
+    margin: 12 px;
+}
+
+.tab-actions {
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
