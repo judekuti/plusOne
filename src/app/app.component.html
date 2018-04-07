@@ -9,7 +9,20 @@
 <mat-sidenav-container fxFlex>
     <mat-sidenav mode="side" align="end" class="mat-elevation-z6" #sidenav>
     <mat-tab-group>
-      <mat-tab label="About">{{selectedModel?.name}}</mat-tab>
+      <mat-tab label="About">
+          <mat-card>
+            <mat-card-title>Name</mat-card-title>
+            <mat-card-content>{{selectedModel?.name}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Status</mat-card-title>
+            <mat-card-content>{{selectedModel?.status}}</mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-title>Bio</mat-card-title>
+            <mat-card-content>{{selectedModel?.about}}</mat-card-content>
+          </mat-card>
+        </mat-tab>
       <mat-tab label="Messages"></mat-tab>
       <mat-tab label="Photos"></mat-tab>
     </mat-tab-group>
