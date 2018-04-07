@@ -7,17 +7,21 @@
 </mat-toolbar>
 
 <mat-sidenav-container fxFlex>
-    <mat-sidenav mode="side" align="end" opened class="mat-elevation-z6">
+    <mat-sidenav mode="side" align="end" class="mat-elevation-z6">
     <mat-tab-group>
       <mat-tab label="About"></mat-tab>
       <mat-tab label="Messages"></mat-tab>
       <mat-tab label="Photos"></mat-tab>
     </mat-tab-group>
    </mat-sidenav>
-   <mat-grid-list cols="4" rowHeight="250px">
-    <mat-grid-tile *ngFor="let model of models">
+   <mat-grid-list cols="4" rowHeight="180px">
+    <mat-grid-tile *ngFor="let model of models" [rowspan]="model.rows" [colspan]="model.cols">
       <img src="assets/{{model.name}}.png" alt="model {{model.name}}">
-    models Here
+    <mat-grid-tile-footer>
+      <h3 mat-line>{{model.name}}</h3>
+      <span mat-line>{{model.status}}</span>
+      <button mat-icon-button (click)="showDetails(model)"><mat-icon>info</mat-icon></button>
+    </mat-grid-tile-footer>
   </mat-grid-tile>
   </mat-grid-list>
 </mat-sidenav-container>
