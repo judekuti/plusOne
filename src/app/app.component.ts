@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
   addMessage(){
       //Open dialog to add message
       // 1. create dialog config
+      const dialogConfig = new MatDialogConfig();
       // 2. open dialog
       // 3. pass selected model to dialog
   }
