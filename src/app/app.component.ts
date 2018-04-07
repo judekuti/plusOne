@@ -10,6 +10,7 @@ import { Model } from './models';
 export class AppComponent {
   title = 'app';
   models: Model[]=[];
+  selectedModel: Model;
   constructor(private modelsService: ModelsService){
 
   }
@@ -20,6 +21,7 @@ export class AppComponent {
   showDetails(model: Model){
       // 1. set selected models
           // we select the model by creating a new property selectedModel within APpComponent
+          this.selectedModel= model;
       // 2. open sidenav
   }
 }
