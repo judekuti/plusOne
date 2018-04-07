@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { ModelsService } from './models.service';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -19,9 +20,9 @@ import { ModelsService } from './models.service';
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule, MatButtonModule, MatCheckboxModule,MatSidenavModule, MatToolbarModule, MatGridListModule, FlexLayoutModule,
-        MatTabsModule, MatIconModule
+        MatTabsModule, MatIconModule, MatCardModule
   ],
-  exports: [MatGridListModule, MatButtonModule,MatSidenavModule, MatToolbarModule, MatCheckboxModule, MatTabsModule, MatIconModule],
+  exports: [MatGridListModule, MatButtonModule,MatSidenavModule, MatToolbarModule, MatCheckboxModule, MatTabsModule, MatIconModule, MatCardModule],
   providers: [ModelsService],
   bootstrap: [AppComponent]
 })
