@@ -16,4 +16,10 @@ export class AppComponent {
   ngOnInit(){
       this.models = this.modelsService.getAll();
   }
+
+  showDetails(model: Model){
+      // 1. set selected models
+          // we select the model by creating a new property selectedModel within APpComponent
+      // 2. open sidenav
+  }
 }
