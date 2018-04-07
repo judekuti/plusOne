@@ -18,5 +18,8 @@ export class ModelsService {
     { name: "EvilDJ", status: "Teaching children to read", about: "I'm a model", messages: [], rows: 1, cols:1},
     { name: "JPPrewit", status: "Teaching children to read", about: "I'm a model", messages: [], rows: 1, cols:1},
   ];
+    getAll():Model[]{
+    return this.models;
+    }
 
 }
