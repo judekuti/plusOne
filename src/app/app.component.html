@@ -1,8 +1,8 @@
 <section class="app flex-container" fxLayout="column" fxLayoutAlign="start stretch">
 <mat-toolbar color="primary" class="mat-elevaton-z10">
-  <mat-icon>favourite</mat-icon>
+  <mat-icon>favorite</mat-icon>
   <span>
-    Plus One... &nbsp; For those who can't find love!
+    &nbsp; Plus One... &nbsp; For those who can't find love!
   </span>
 </mat-toolbar>
 
@@ -14,6 +14,11 @@
       <mat-tab label="Photos"></mat-tab>
     </mat-tab-group>
    </mat-sidenav>
-    models
+   <mat-grid-list cols="4" rowHeight="250px">
+    <mat-grid-tile *ngFor="let model of models">
+      <img src="assets/{{model.name}}.png" alt="model {{model.name}}">
+    models Here
+  </mat-grid-tile>
+  </mat-grid-list>
 </mat-sidenav-container>
 </section>
