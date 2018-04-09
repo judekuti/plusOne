@@ -21,6 +21,11 @@ import { FormsModule } from '@angular/forms';
     AppComponent, AddMessageComponent
   ],
 
+entryComponents: [
+    AppComponent,
+    AddMessageComponent
+  ],
+
   imports: [
     BrowserModule,BrowserAnimationsModule, MatButtonModule, MatCheckboxModule,MatSidenavModule, MatToolbarModule, MatGridListModule, FlexLayoutModule,
         MatTabsModule, MatIconModule, MatCardModule, MatDialogModule, MatInputModule, FormsModule
